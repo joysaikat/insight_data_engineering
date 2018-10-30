@@ -48,13 +48,13 @@ with open(loc,'rt') as csv_file:
     for caps in captions:
         if 'STATUS' in caps:
             status_num =  captions.index(caps)
-        if 'EMPLOYER_STATE' in caps:
-            emp_state_num = captions.index(caps)
+        if 'WORKSITE_STATE' in caps:
+            wrk_state_num = captions.index(caps)
         if 'SOC_NAME' in caps:
             occupation_num = captions.index(caps)
-    employer_state_dict.extend(top_10(csv.reader(csv_file, delimiter=';'), emp_state_num, status_num))
+    wrk_state_dict.extend(top_10(csv.reader(csv_file, delimiter=';'), wrk_state_num, status_num))
 f = open("./output/top_10_states.txt","w")
-for t in employer_state_dict:
+for t in wrk_state_dict:
     line = ';'.join(str(x) for x in t)
     f.write(line + '\n')
 f.close()
