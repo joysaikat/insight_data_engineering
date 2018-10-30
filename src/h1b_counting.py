@@ -30,7 +30,7 @@ def top_10(file, num, constraint):
         
 
 
-employer_state_dict = [\
+wrk_state_dict = [\
 ('TOP_STATES', \
 'NUMBER_CERTIFIED_APPLICATIONS', \
 'PERCENTAGE'),\
